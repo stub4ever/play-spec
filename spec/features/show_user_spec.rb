@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe 'Viewing the list of users' do
+describe "View indivual user page" do
 
-   it 'Show all information of the user' do
+  it "show page of the user with all information" do
     user1 = User.create(username: "4stars",
                         name: "Kayo",
                         age: 25,
@@ -11,32 +11,12 @@ describe 'Viewing the list of users' do
                         address: "Nijmegen",
                         bio: "I am Developer")
 
-    user2 = User.create(username: "Aetherius",
-                        name: "An",
-                        age: 22,
-                        email: "an@gmail.com",
-                        password: "1221",
-                        address: "Oss")
-
-    user3 = User.create(username: "Hydeout",
-                        name: "Quoc",
-                        age: 25,
-                        email: "quic@gmail.com",
-                        password: "Quocokq1",
-                        address: "Almere")
-    visit users_url
-
-    expect(page).to have_text("3 Users")
+    visit "http://example.com/users/#{user1.id}"
 
     expect(page).to have_text(user1.username)
-    expect(page).to have_text(user1.password)
     expect(page).to have_text(user1.age)
     expect(page).to have_text(user1.email)
     expect(page).to have_text(user1.address)
-
-    expect(page).to have_text(user2.name)
-    expect(page).to have_text(user3.name)
-
     expect(page).to have_text(user1.bio)
   end
 
@@ -49,7 +29,7 @@ describe 'Viewing the list of users' do
                         address: "Nijmegen",
                         bio: "a" * 30)
 
-    visit users_url
+    visit "http://example.com/users/#{user1.id}"
 
     expect(page).to have_text(user1.bio)
   end
