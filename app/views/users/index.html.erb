@@ -1,7 +1,14 @@
-<h1>The list of users</h1>
+<h1><%= pluralize(@users.size, 'User') %></h1>
 
 <ul>
   <% @users.each do |user| %>
-  < li><%= user %></li>
+  <h1><%= user.username %></h1>
+  <li><%= user.password %></li>
+  <li><%= user.name %></li>
+  <li><%= user.age %></li>
+  <li><%= user.email %></li>
+  <li><%= user.address %></li>
   <% end %>
 </ul>
+
+
