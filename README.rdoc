@@ -6,4 +6,4 @@
 * Test each user has their own page with information
 * Test show all information of the user
 * Test navigation between user page * users page
-* Test if age of the user less than 18 call him/her "Younger!"
+* Test if age of the user less than 18 call him/her "Youngster!"
