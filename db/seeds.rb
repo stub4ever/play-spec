@@ -8,6 +8,10 @@
 
 User.destroy_all
 
+d1 = DateTime.new(2015, 6, 06)
+d2 = DateTime.new(2015, 6, 06)
+d3 = DateTime.new(2015, 6, 11)
+
 User.create!([
   {
   username: "4stars",
@@ -16,7 +20,8 @@ User.create!([
   email: "kayo@gmail.com",
   password: "21312ew",
   address: "Nijmegen",
-  bio: "I am Developer"
+  bio: "I am Developer",
+  date_project: d1
   },
   {
   username: "Aetherius",
@@ -25,8 +30,8 @@ User.create!([
   email: "an@gmail.com",
   password: "1221",
   address: "Oss",
-  bio: "I am Master"
-
+  bio: "I am Master",
+  date_project: d2
   },
   {
   username: "Hydeout",
@@ -35,7 +40,7 @@ User.create!([
   email: "quic@gmail.com",
   password: "Quocokq1",
   address: "Almere",
-  bio: "I am Designer"
-
+  bio: "I am Designer",
+  date_project: d3
   }
   ])
