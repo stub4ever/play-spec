@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "View indivual user page" do
 
-  it "show page of the user with all information" do
+  it "shows page of the user with all information" do
     user1 = User.create(user_attributes)
 
     visit "http://example.com/users/#{user1.id}"
@@ -14,7 +14,7 @@ describe "View indivual user page" do
     expect(page).to have_text(user1.bio)
   end
 
-  it 'show bio within 30 characters' do
+  it 'shows bio within 30 characters' do
     user1 = User.create(user_attributes)
 
     visit "http://example.com/users/#{user1.id}"
@@ -23,3 +23,6 @@ describe "View indivual user page" do
   end
 
 end
+
+
+
