@@ -3,13 +3,7 @@ require 'rails_helper'
 describe "View indivual user page" do
 
   it "show page of the user with all information" do
-    user1 = User.create(username: "4stars",
-                        name: "Kayo",
-                        age: 25,
-                        email: "kayo@gmail.com",
-                        password: "21312ew",
-                        address: "Nijmegen",
-                        bio: "I am Developer")
+    user1 = User.create(user_attributes)
 
     visit "http://example.com/users/#{user1.id}"
 
@@ -21,13 +15,7 @@ describe "View indivual user page" do
   end
 
   it 'show bio within 30 characters' do
-    user1 = User.create(username: "4stars",
-                        name: "Kayo",
-                        age: 25,
-                        email: "kayo@gmail.com",
-                        password: "21312ew",
-                        address: "Nijmegen",
-                        bio: "a" * 30)
+    user1 = User.create(user_attributes)
 
     visit "http://example.com/users/#{user1.id}"
 
