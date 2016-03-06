@@ -2,8 +2,9 @@
 
 # Testing users list with Rspec
 
-* Test Display all users on the page by username
-* Test each user has their own page with information
-* Test show all information of the user
-* Test navigation between user page * users page
-* Test if age of the user less than 18 call him/her "Youngster!"
+* Tested: Display all users on the page by username
+* Tested: each user has their own page with information
+* Tested: shows all information of the user
+* Tested: navigation between user page * users page
+* Tested: if age of the user less than 18 call him/her "Youngster!"
+* Tested: shows formated project date of the user
